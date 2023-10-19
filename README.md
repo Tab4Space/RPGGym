@@ -23,7 +23,6 @@ RPG Gym: RPG Game Simulator for Deep Learning [[PDF]](https://github.com/Tab4Spa
 * 각 캐릭터에는 UDP 소켓이 구현되어 있으며, Deep Learning을 사용할 경우 UDP 패킷 메시지에 따라 데이터 송수신, 시뮬레이션 리셋, 시뮬레이션 종료를 처리
 * BaseCharacter 클래스(C++)에서 공통 기능을 구현한 후 Blueprint로 상속하여 스킬, 데미지 처리 등을 구현
 * 공격 스킬은 모션에 맞춰 발동되도록 Anim Montage에 AnimNotify를 추가하고 Notify에서 캐릭터의 데미지 전달 함수를 호출하도록 구현
-* 캐릭터는 시뮬레이션이 초기화 할 때, JSON 파일로부터 필요한 설정 값(스탯, 스킬 정보 등)을 파싱
 <img src=./assets/BP_Kwang-EventGraph.png>
 <br/>
 
@@ -38,7 +37,14 @@ RPG Gym: RPG Game Simulator for Deep Learning [[PDF]](https://github.com/Tab4Spa
 <br/>
 
 **3. 게임 시스템 구현**
-* Deep Learning 학습에서 매 시
+* Game Instance 구현 (Blueprint)
+    * 게임을 실행할 때, 캐릭터, 보스 몬스터, 게임 규칙 등 필요한 정보를 JSON 파일에서 파싱
+    * 파싱된 데이터는 구조체로 관리
+    <img src=./assets/GI_RpgGym-EventGraph.png>
+* Game Mode 구현 (Blueprint)
+    * 게임이 시작될 때, 캐릭터, 보스 몬스터, 게임 규칙을 Game Instance에서 파싱한 JSON 데이터를 사용해 초기화
+    * 게임의 제한 시간, 리셋, 종료 등을 관리
+    <img src=./assets/GM_RpgGym-EventGraph.png>
 <br/>
 
 **4. 시뮬레이션 기능 구현**
@@ -56,5 +62,4 @@ RPG Gym: RPG Game Simulator for Deep Learning [[PDF]](https://github.com/Tab4Spa
 
 ### 시연 영상
 [Main video (Youtube)](https://youtu.be/bcWVn1OAfio?si=WacA7I782eE65u20)
-
 [Playlist (Youtube)](https://www.youtube.com/playlist?list=PLnRVH8DOZjpBI7xO6tHZ05E6oc1IDHXe7)
