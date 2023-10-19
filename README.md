@@ -13,6 +13,11 @@ RPG Gym: RPG Game Simulator for Deep Learning [[PDF]](https://github.com/Tab4Spa
     * Deep Learning 학습에 필요한 기능(Python 프로세스 통신, Headless, 가속화, 로깅, Config 파싱 등) 구현
     * Imitation Learning, Reinforcement Learning 학습 및 실험
     * 플레이어 캐릭터 & 보스 몬스터 간의 Balance 조절 실험
+    <br/>
+    <img src="./assets/Architecture.png">
+<br/>
+
+### 프로젝트 세부 내용
 
 
 
@@ -23,4 +28,5 @@ RPG Gym: RPG Game Simulator for Deep Learning [[PDF]](https://github.com/Tab4Spa
 
 ### 시연 영상
 [Main video (Youtube)](https://youtu.be/bcWVn1OAfio?si=WacA7I782eE65u20)
+
 [Playlist (Youtube)](https://www.youtube.com/playlist?list=PLnRVH8DOZjpBI7xO6tHZ05E6oc1IDHXe7)
